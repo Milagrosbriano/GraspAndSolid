@@ -8,14 +8,21 @@ namespace Full_GRASP_And_SOLID.Library
 {
     public class Product
     {
-        public Product(string description, double unitCost)
+        public int Cantidad {get; set;}
+
+        public string Unidad {get; set;}
+        public string Ingredientes {get; set;}
+        public double Costo {get; set;}
+        public string Description {get; set;}
+        public object UnitOfMeasurement { get; set; }
+
+        public Product (int cantidad, string unidad, string ingredientes, double costo, string description)
         {
-            this.Description = description;
-            this.UnitCost = unitCost;
+            Cantidad = cantidad;
+            Unidad = unidad;
+            Ingredientes = ingredientes;
+            Costo = costo;
+            Description = description;
         }
-
-        public string Description { get; set; }
-
-        public double UnitCost { get; set; }
     }
 }
